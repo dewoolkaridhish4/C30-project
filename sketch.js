@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint=Matter.Constraint;
 
 function preload(){
-  ballImg=loadImage("Ball.png");
+  ballImg=loadImage("Sprites/Ball.png");
 }
 
 function setup() {
@@ -80,4 +80,10 @@ function mouseDragged(){
 
 function mouseReleased(){
   slingshot.fly();
+}
+
+function keyPressed(){
+  if(keyCode===32){
+    slingshot.attach(this.ball);
+  }
 }
